@@ -1,8 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+
 html{
-    font-size: 16px;
+    font-size: 1rem;
+
 }
+
+:root {
+    --main-color: #38F591;
+    --second-color: #9843E8;
+    --gray: #c2c2c2;
+    --header-size: 3.4rem;
+    --subheader-size: 2rem;
+    --paragraph-size: 1.2rem;
+    --navbar-links-size: .9rem;
+}
+
+#main{
+    background-color: #ffffffec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+    #main h1{
+        font-size: var(--header-size);
+        letter-spacing: 10px;
+        color: var(--second-color);
+        font-family: Lobster;
+    }
+
+    #main h2{
+        font-style: italic;
+        font-size: var(--subheader-size);
+        color: var(--main-color);
+        border-left: 8px solid var(--main-color);
+        transition: transform 2.5s;
+        transform: translate(40px);
+    }
+    .contact {
+        display: inline-block;
+        border: 4px solid var(--second-color);
+        border-radius: 40px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 30px 20px;
+        padding: 9px;
+        text-decoration: none;
+        transition: background 500ms;
+        color: var(--second-color);
+        font-size: var(--navbar-links-size);
+    }
+        .contact:hover {
+            background-color: var(--second-color);
+            color: #fff;
+        }
 
 body {
     margin: 0;
@@ -56,6 +111,7 @@ nav {
 
     #about-me{
         padding: 4rem 2rem;
+        min-height: 90vh;
     }
         .about-me-container{
             display: flex;
@@ -73,13 +129,16 @@ nav {
 
     #projects{
         background-color: #ffffff;
+        min-height: 100vh;
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         color: #000000;
         padding: 50px 10px;
+        
     }
         .projects-container{
-            margin-right: 2rem;
             font-size: 1.8rem;
         }
             .skills{
@@ -93,7 +152,7 @@ nav {
                     
                 }
                     .skills-container img{
-                        margin: 10px;
+                        padding: 3rem;
                         width: 6rem;
                         height: auto;
                     }
@@ -107,15 +166,62 @@ nav {
     }
 
     @media screen and (max-width: 850px) {
+        #projects{
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            color: #000000;
+            padding: 50px 100px;
+            
+        }
         .about-me-text-container {
             margin: 0;
         }
         .portrait{
             display: none;
         }
+        .skills-container img{
+            padding: 30px;
+            height: auto;
+        }
+    }
+    @media screen and (max-width: 690px) {
+        .skills-container img{
+            padding: 20px;
+            height: auto;
+        }
+    }
+    @media screen and (max-width: 540px) {
+        
+#main{
+    background-color: #ffffffec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+    #main h1{
+        font-size: var(--subheader-size);
     }
 
+    #main h2{
+        font-size: var(--subheader-size);
+
+    }
+}
     @media screen and (max-width: 490px) {
+
+        .skills-container img{
+            padding: 10px;
+            width: 6rem;
+            height: auto;
+        }
 
         footer .logo{
             display: none;
@@ -130,6 +236,7 @@ nav {
 
         #projects{
             flex-direction: column;
+            padding: 50px 10px;
         }
             .projects-container{
                 margin: 0;
@@ -149,7 +256,33 @@ nav {
                 justify-content: center;
             }
     }
-
+    @media screen and (max-width: 350px) {
+        #main{
+            background-color: #ffffffec;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0 20px;
+        }
+            #main h1{
+                font-size: var(--navbar-links-size);
+            }
+        
+            #main h2{
+                font-size: var(--navbar-links-size);
+        
+            }
+            .contact{
+                display: none;
+            }
+    }
+    @media screen and (max-width: 205px) {
+        header{
+            justify-content: space-evenly;
+        }
+    }
     @media screen and (max-width: 175px) {
 
         .logo{
