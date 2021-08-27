@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 html{
     font-size: 1rem;
-
+    overflow-x: hidden;
 }
 
 :root {
     --main-color: #38F591;
-    --second-color: #9843E8;
+    --second-color: #ff5e00;
     --gray: #c2c2c2;
     --header-size: 3.4rem;
     --subheader-size: 2rem;
@@ -58,6 +58,21 @@ html{
             background-color: var(--second-color);
             color: #fff;
         }
+
+/*go down scroll method */
+
+.scroll{
+    color:#000000 ;
+    font-size: 1.5rem;
+    padding: 20px;
+    position: absolute;
+    bottom: 10px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 body {
     margin: 0;
@@ -197,6 +212,12 @@ nav {
     }
     @media screen and (max-width: 540px) {
         
+        .scroll{
+            margin: 0;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
 #main{
     background-color: #ffffffec;
     display: flex;
@@ -217,6 +238,17 @@ nav {
 }
     @media screen and (max-width: 490px) {
 
+        #main h2{
+            transform: translate(20px);
+        }
+
+        .scroll{
+            bottom: 0;
+            padding: 0;
+            position: relative;
+            margin-top:10px;
+        }
+
         .skills-container img{
             padding: 10px;
             width: 6rem;
@@ -231,7 +263,7 @@ nav {
         }
             .about-me-text-container{
                 margin: 0;
-                font-size: 1rem;
+                font-size: 1.5rem;
             }
 
         #projects{
@@ -256,18 +288,25 @@ nav {
                 justify-content: center;
             }
     }
-    @media screen and (max-width: 350px) {
+    @media screen and (max-width: 370px) {
+
+        .scroll{
+            padding: 0;
+            position: absolute;
+            bottom: 0;
+        }
+
         #main{
             background-color: #ffffffec;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height: 85vh;
             padding: 0 20px;
         }
             #main h1{
-                font-size: var(--navbar-links-size);
+                font-size: 1.3rem;
             }
         
             #main h2{
@@ -277,6 +316,15 @@ nav {
             .contact{
                 display: none;
             }
+
+            #about-me{
+                min-height: 0vh;
+            }
+            .about-me-text-container {
+                margin: 0;
+                font-size: 1rem;
+            }
+
     }
     @media screen and (max-width: 205px) {
         header{
