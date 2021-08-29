@@ -148,29 +148,29 @@ nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         color: #000000;
         padding: 50px 10px;
         
     }
         .projects-container{
             font-size: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-            .skills{
-                font-size: 1.8rem;
+            
+            .skills-container{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                font-size: 3em;
             }
-                .skills-container{
-                    display: flex;
-                    width: 100%;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    
+                .skills-container span{
+                    margin: 10px;
+                    padding: 10px;
                 }
-                    .skills-container img{
-                        padding: 3rem;
-                        width: 6rem;
-                        height: auto;
-                    }
 
     footer{
         display: flex;
@@ -237,6 +237,13 @@ nav {
     }
 }
     @media screen and (max-width: 490px) {
+
+        .projects-container ul{
+            margin: 30px 0 30px 0;
+        }
+        .skills-container{
+            margin-top: 30px;
+        }
 
         #main h2{
             transform: translate(20px);
