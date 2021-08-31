@@ -219,7 +219,7 @@ nav {
         }
 
 #main{
-    background-color: #ffffffec;
+    background: url(git\Images\pexels-hasan-albari-1229861.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
