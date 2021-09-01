@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
 
 html{
     font-size: 1rem;
@@ -17,7 +19,7 @@ html{
 }
 
 #main{
-    background-color: #ffffffec;
+    background-image: url(../git/Images/pexels-hasan-albari-1229861.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -167,9 +169,18 @@ nav {
                 flex-wrap: wrap;
                 font-size: 3em;
             }
+                .dissapear{
+                    display: none;
+                }
                 .skills-container span{
                     margin: 10px;
                     padding: 10px;
+                }
+                .skills-container span:hover .dissapear{
+                    display: inline-block;
+                    font-family: 'Coming Soon', cursive;
+                    background-color: #ff5e00;
+                    border-radius: 10%;
                 }
 
     footer{
@@ -219,7 +230,6 @@ nav {
         }
 
 #main{
-    background: url(git\Images\pexels-hasan-albari-1229861.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -237,6 +247,14 @@ nav {
     }
 }
     @media screen and (max-width: 490px) {
+
+        .skills-container span:hover .dissapear{
+            font-size: var(--navbar-links-size);
+            display: block;
+            font-family: 'Coming Soon', cursive;
+            background-color: #ff5e00;
+            border-radius: 10%;
+        }
 
         .projects-container ul{
             margin: 30px 0 30px 0;
